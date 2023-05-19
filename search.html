@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   
+    body{
+        background-image: linear-gradient(rgb(23, 189, 125) 50%,white) ;
+        height: 100vh;
+    }
+    .cont{
+        
+        background-color:yellow;
+        height:200px;
+        width:200px;
+        margin: auto;
+        border: none;
+        border-radius: 50%;
+    }
+    .grad{
+        background: radial-gradient(yellow, white 10%, rgb(23, 189, 125) 60%);
+        height:400px;
+        width:400px;
+        margin: auto;
+        border: none;
+        border-radius: 50%;
+        position:relative;
+        bottom: 300px;
+        opacity: 0.5;
+        border: none
+    }
+    .whole{
+        transition: 1s;
+        width: 600px;
+        height: 500px;
+    }
+
+    .search{
+        background-color:rgb(7, 80, 177) ;
+        height: 30px;
+        width: 50%;
+        color:rgb(255, 255, 255);
+        border-radius: 20px;
+        border: none;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+        font-weight: 900;
+        margin: auto;
+        display: block;
+        padding-left: 20px ;
+        transition: 0.5s;
+    }
+    .search:focus{
+        width: 70%;
+        padding: 40px;
+    }
+    .search:hover{
+        width:70% ;
+    }
+
+    </style>
+
+
+</head>
+<body>
+    <!-- the whole -->
+<div class="whole">
+
+<!-- the container -->
+<div class="cont"></div>
+<!-- the grad -->
+<div class="grad"></div>
+
+</div>
+
+
+<input type="text" placeholder="Type Here"class="search"></textarea>
+
+
+</body>
+<script>
+    let t = document.querySelector('.whole')
+    let s = document.querySelector('.search')
+
+    let a = true;
+    s.addEventListener('click',function(){
+        if(a){
+            t.style.transform = "translate(500px,300px)"
+            a=false;
+        }
+        else{
+            t.style.transform = "translate(0px,0px)"
+            a=true;
+        }
+    })
+</script>
+
+</html>
